@@ -10,7 +10,7 @@ function OurSpaces() {
 NUESTROS ESPACIOS</span>
     </div>
   </div>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-5">
         <div className="text-center mb-12 sm:mb-16">
           <p className="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-800">Elegí el que más se adapte a vos</p>
         </div>

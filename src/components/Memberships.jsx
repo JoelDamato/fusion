@@ -24,26 +24,26 @@ function Memberships() {
               <div key={i} className="flex items-center justify-between">
                 {/* título + subtítulo */}
                 <div className="min-w-0">
-                  <div className="font-montserrat font-extrabold text-gray-900 text-lg sm:text-xl leading-tight uppercase tracking-[0.02em]">
+                  <div className="font-montserrat font-extrabold text-gray-900 text-sm sm:text-xl leading-tight uppercase tracking-[0.02em]">
                     {t.title}
                   </div>
-                  <div className="font-montserrat text-gray-500 text-xs sm:text-sm tracking-[0.25em] uppercase">
+                  <div className="font-montserrat text-gray-500 text-[10px] sm:text-sm tracking-[0.25em] uppercase">
                     {t.subtitle}
                   </div>
                 </div>
 
                 {/* Botones segmentados */}
-                <div className="flex items-center gap-2">
+                <div className="flex items-center gap-1 sm:gap-2">
                   <button
-                    className="font-montserrat text-[12px] sm:text-sm font-extrabold uppercase tracking-[0.08em]
-                               px-3 sm:px-4 py-2 bg-zinc-700 text-[#fcc803] shadow 
+                    className="font-montserrat text-[10px] sm:text-sm font-extrabold uppercase tracking-[0.08em]
+                               px-2 sm:px-4 py-1 sm:py-2 bg-zinc-700 text-[#fcc803] shadow 
                                hover:bg-zinc-800 transition-colors rounded-[4px]"
                   >
                     FULL TIME
                   </button>
                   <button
-                    className="font-montserrat text-[12px] sm:text-sm font-extrabold uppercase tracking-[0.08em]
-                               px-3 sm:px-4 py-2 bg-[#fcc803] text-zinc-800 shadow 
+                    className="font-montserrat text-[10px] sm:text-sm font-extrabold uppercase tracking-[0.08em]
+                               px-2 sm:px-4 py-1 sm:py-2 bg-[#fcc803] text-zinc-800 shadow 
                                hover:bg-[#f2c319] transition-colors rounded-[4px]"
                   >
                     PART TIME
@@ -54,32 +54,32 @@ function Memberships() {
           </div>
 
           {/* Columna derecha: blob + contenido */}
-          <div className="relative overflow-visible rounded-3xl lg:rounded-none lg:py-8">
+          <div className="relative overflow-visible rounded-3xl lg:rounded-none lg:py-8 mt-8 sm:mt-0">
             {/* Imagen de mancha de fondo */}
             <div className="pointer-events-none absolute inset-0 overflow-visible">
               <img
                 src="/images/mancha.png"
                 alt="Mancha decorativa"
-                className="w-full h-full object-contain scale-150 lg:scale-[1.6] lg:-translate-x-12 lg:-translate-y-4"
+                className="w-full h-full object-contain scale-[1.8] lg:scale-[1.6] lg:-translate-x-6 lg:-translate-y-4"
                 aria-hidden="true"
               />
             </div>
 
             {/* Contenido sobre el blob */}
-            <div className="relative z-10 px-4 lg:px-8 lg:ml-12 py-6 lg:py-10 flex flex-col items-center justify-center h-full">
+            <div className="relative z-10 px-4 lg:px-8 lg:ml-8 py-6 lg:py-10 flex flex-col items-center justify-center h-full">
               {/* Bloque: OFICINA PRIVADA */}
-              <div className="mb-6 text-center">
-                <h3 className="font-montserrat font-extrabold text-zinc-900 text-sm sm:text-base uppercase tracking-[0.04em]">
+              <div className="mb-3 sm:mb-6 text-center">
+                <h3 className="font-montserrat font-extrabold text-zinc-900 text-[10px] sm:text-base lg:text-lg uppercase tracking-[0.02em]">
                   OFICINA PRIVADA BARROCO / GÓTICO
                 </h3>
-                <ul className="mt-2 space-y-1">
-                  <li className="font-montserrat text-zinc-900/90 uppercase tracking-[0.2em] text-[9px] sm:text-[10px]">
+                <ul className="mt-1 sm:mt-2 space-y-0.5">
+                  <li className="font-montserrat text-zinc-900/90 uppercase tracking-[0.1em] text-[7px] sm:text-[10px] lg:text-xs">
                     CAPACIDAD HASTA 5 PERSONAS
                   </li>
-                  <li className="font-montserrat text-zinc-900/90 uppercase tracking-[0.2em] text-[9px] sm:text-[10px]">
+                  <li className="font-montserrat text-zinc-900/90 uppercase tracking-[0.1em] text-[7px] sm:text-[10px] lg:text-xs">
                     POR OFICINA
                   </li>
-                  <li className="font-montserrat text-zinc-900/90 uppercase tracking-[0.2em] text-[9px] sm:text-[10px]">
+                  <li className="font-montserrat text-zinc-900/90 uppercase tracking-[0.1em] text-[7px] sm:text-[10px] lg:text-xs">
                     CONSULTAR PRECIOS DISPONIBLES
                   </li>
                 </ul>
@@ -87,17 +87,17 @@ function Memberships() {
 
               {/* Bloque: SALA DE REUNIÓN */}
               <div className="text-center">
-                <h3 className="font-montserrat font-extrabold text-zinc-900 text-sm sm:text-base uppercase tracking-[0.04em]">
+                <h3 className="font-montserrat font-extrabold text-zinc-900 text-[10px] sm:text-base lg:text-lg uppercase tracking-[0.02em]">
                   SALA DE REUNIÓN
                 </h3>
-                <ul className="mt-2 space-y-1">
-                  <li className="font-montserrat text-zinc-900/90 uppercase tracking-[0.2em] text-[9px] sm:text-[10px]">
+                <ul className="mt-1 sm:mt-2 space-y-0.5">
+                  <li className="font-montserrat text-zinc-900/90 uppercase tracking-[0.1em] text-[7px] sm:text-[10px] lg:text-xs">
                     ALQUILER POR HORA
                   </li>
-                  <li className="font-montserrat text-zinc-900/90 uppercase tracking-[0.2em] text-[9px] sm:text-[10px]">
+                  <li className="font-montserrat text-zinc-900/90 uppercase tracking-[0.1em] text-[7px] sm:text-[10px] lg:text-xs">
                     CAPACIDAD HASTA 10 PERSONAS
                   </li>
-                  <li className="font-montserrat text-zinc-900/90 uppercase tracking-[0.2em] text-[9px] sm:text-[10px]">
+                  <li className="font-montserrat text-zinc-900/90 uppercase tracking-[0.1em] text-[7px] sm:text-[10px] lg:text-xs">
                     CONSULTAR PRECIOS Y PROMOS DISPONIBLES
                   </li>
                 </ul>

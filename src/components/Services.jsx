@@ -160,7 +160,7 @@ function Services() {
         </div>
       </div>
       
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto pt-5 px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h3 className="text-3xl font-bold text-gray-800 mb-4">Comodidades que aumentan tu productividad</h3>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
