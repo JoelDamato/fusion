@@ -32,28 +32,14 @@ function WhyFusionVideo() {
           {/* Right Video */}
           <div className="relative w-full max-w-[48rem] order-1 lg:order-2 justify-self-center">
             <div className="h-64 sm:h-80 lg:h-96 bg-gray-200 rounded-[1.75rem] overflow-hidden shadow-lg">
-              {/* Placeholder (reemplazá por tu video cuando lo tengas) */}
-              <div className="w-full h-full bg-gradient-to-br from-gray-100 to-gray-200 flex items-center justify-center relative">
-                <div className="absolute inset-0 bg-gradient-to-br from-blue-50 to-gray-100" />
-                <div className="relative z-10 text-center">
-                  <div className="w-16 h-16 bg-white/90 rounded-full flex items-center justify-center shadow-lg">
-                    <svg className="w-8 h-8 text-gray-700 ml-1" fill="currentColor" viewBox="0 0 20 20">
-                      <path d="M6.3 2.841A1.5 1.5 0 004 4.11V15.89a1.5 1.5 0 002.3 1.269l9.344-5.89a1.5 1.5 0 000-2.538L6.3 2.84z"/>
-                    </svg>
-                  </div>
-                </div>
-              </div>
-
-              {/*
-              <video 
-                className="w-full h-full object-cover rounded-[1.75rem]"
-                controls
-                poster="/images/video-poster.jpg"
-              >
-                <source src="/videos/fusion-coworking.mp4" type="video/mp4" />
-                Tu navegador no soporta videos.
-              </video>
-              */}
+              <iframe
+                src="https://fast.wistia.net/embed/iframe/whrhdbcqn3"
+                title="Fusion Coworking Video"
+                allow="autoplay; fullscreen"
+                allowFullScreen
+                className="w-full h-full rounded-[1.75rem]"
+                style={{ border: 'none' }}
+              />
             </div>
           </div>
 

@@ -18,8 +18,12 @@ NUESTROS ESPACIOS</span>
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 sm:gap-8 mb-8 sm:mb-12">
           {/* Main Image */}
           <div className="lg:col-span-2 order-1">
-            <div className="w-full h-64 sm:h-80 lg:h-96 bg-gradient-to-br from-green-100 to-blue-100 rounded-lg flex items-center justify-center">
-              <span className="text-gray-500 text-sm sm:text-base">Área compartida de coworking</span>
+            <div className="w-full h-64 sm:h-80 lg:h-96 rounded-lg overflow-hidden">
+              <img 
+                src="/images/header.jpeg" 
+                alt="Área compartida de coworking" 
+                className="w-full h-full object-cover"
+              />
             </div>
           </div>
           

@@ -31,7 +31,7 @@ function Navbar() {
                          <nav className="flex items-center space-x-8">
                <a href="#inicio" className="text-white text-xl font-black hover:text-yellow-400 transition-colors txt-float-solid-blur">Inicio</a>
                <a href="#espacios" className="text-white text-xl font-black hover:text-yellow-400 transition-colors txt-float-solid-blur">Nuestros espacios</a>
-               <a href="#reserva" className="text-white text-xl font-black hover:text-yellow-400 transition-colors txt-float-solid-blur">Reserva</a>
+               <a href="#contacto" className="text-white text-xl font-black hover:text-yellow-400 transition-colors txt-float-solid-blur">Reserva</a>
                <a href="#contacto" className="text-white text-xl font-black hover:text-yellow-400 transition-colors txt-float-solid-blur">Contacto</a>
              </nav>
 
@@ -53,6 +53,7 @@ function Navbar() {
                          <nav className="flex space-x-4 mr-2">
                <a href="#inicio" className="text-white text-base font-black hover:text-yellow-400 transition-colors">Inicio</a>
                <a href="#espacios" className="text-white text-base font-black hover:text-yellow-400 transition-colors">Espacios</a>
+               <a href="#contacto" className="text-white text-base font-black hover:text-yellow-400 transition-colors">Reserva</a>
                <a href="#contacto" className="text-white text-base font-black hover:text-yellow-400 transition-colors">Contacto</a>
              </nav>
             <button className="text-white p-1" aria-label="Abrir menú">

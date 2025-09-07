@@ -49,10 +49,10 @@ function WorkspaceCards() {
   const getCardStyles = (index) => {
     if (index === currentCard) {
       // Centro (grande)
-      return 'w-80 sm:w-96 lg:w-[30rem] h-64 sm:h-72 lg:h-80 scale-110 lg:scale-125 z-20 shadow-[0_0_45px_rgba(250,205,18,0.55)] opacity-100'
+      return 'w-80 sm:w-96 lg:w-[30rem] h-64 sm:h-72 lg:h-80 scale-105 lg:scale-110 z-20 shadow-[0_0_45px_rgba(250,205,18,0.55)] opacity-100'
     }
-    // Laterales (más chicas, derechas, sin blur)
-    return 'w-56 sm:w-64 lg:w-72 h-48 sm:h-56 lg:h-64 scale-90 z-10 opacity-75'
+    // Laterales (más chicas, sin escala para evitar overflow)
+    return 'w-64 sm:w-72 lg:w-80 h-56 sm:h-64 lg:h-72 z-10 opacity-75'
   }
 
   // índice de la izquierda y derecha
@@ -87,7 +87,7 @@ function WorkspaceCards() {
           </button>
 
           {/* Contenedor de cards */}
-          <div className="flex justify-center items-center gap-4 lg:gap-8">
+          <div className="flex justify-center items-center gap-2 sm:gap-4 lg:gap-6 overflow-hidden">
                          {/* Izquierda (clickeable) */}
              <div
                onClick={() => setCurrentCard(leftIndex)}
