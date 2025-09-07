@@ -151,7 +151,7 @@ function Services() {
   return (
     <section className="py-20 bg-gray-50">
       {/* Badge */}
-      <div className="-ml-4 sm:-ml-4 lg:-ml-6">
+      <div className="-ml-4 sm:-ml-4 lg:-ml-6 mt-3 sm:mt-0">
         <div className="inline-flex items-center bg-[#fcc803] rounded-full px-6 py-2">
           <div className="w-5 h-[2px] bg-black mr-3 ml-5" />
           <span className="font-montserrat text-black text-sm sm:text-base lg:text-lg font-medium tracking-wider">

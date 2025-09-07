@@ -48,20 +48,31 @@ function Navbar() {
             </a>
           </div>
 
-          {/* Mobile: links cortos + menú */}
+          {/* Mobile: menú hamburguesa */}
           <div className="md:hidden flex items-center">
-                         <nav className="flex space-x-4 mr-2">
-               <a href="#inicio" className="text-white text-base font-black hover:text-yellow-400 transition-colors">Inicio</a>
-               <a href="#espacios" className="text-white text-base font-black hover:text-yellow-400 transition-colors">Espacios</a>
-               <a href="#contacto" className="text-white text-base font-black hover:text-yellow-400 transition-colors">Reserva</a>
-               <a href="#contacto" className="text-white text-base font-black hover:text-yellow-400 transition-colors">Contacto</a>
-             </nav>
-            <button className="text-white p-1" aria-label="Abrir menú">
-              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <button 
+              className="text-white p-2" 
+              aria-label="Abrir menú"
+              onClick={() => {
+                const menu = document.getElementById('mobile-menu');
+                menu?.classList.toggle('hidden');
+              }}
+            >
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
               </svg>
             </button>
           </div>
+        </div>
+      </div>
+
+      {/* Menú móvil desplegable */}
+      <div id="mobile-menu" className="md:hidden hidden bg-black/90 backdrop-blur-sm">
+        <div className="px-4 py-6 space-y-4">
+          <a href="#inicio" className="block text-white text-lg font-black hover:text-yellow-400 transition-colors py-2">Inicio</a>
+          <a href="#espacios" className="block text-white text-lg font-black hover:text-yellow-400 transition-colors py-2">Nuestros espacios</a>
+          <a href="#contacto" className="block text-white text-lg font-black hover:text-yellow-400 transition-colors py-2">Reserva</a>
+          <a href="#contacto" className="block text-white text-lg font-black hover:text-yellow-400 transition-colors py-2">Contacto</a>
         </div>
       </div>
     </header>

@@ -49,10 +49,10 @@ function WorkspaceCards() {
   const getCardStyles = (index) => {
     if (index === currentCard) {
       // Centro (grande)
-      return 'w-80 sm:w-96 lg:w-[30rem] h-64 sm:h-72 lg:h-80 scale-105 lg:scale-110 z-20 shadow-[0_0_45px_rgba(250,205,18,0.55)] opacity-100'
+      return 'w-72 sm:w-80 lg:w-96 h-64 sm:h-72 lg:h-80 scale-100 lg:scale-105 z-20 shadow-[0_0_45px_rgba(250,205,18,0.55)] opacity-100'
     }
     // Laterales (más chicas, sin escala para evitar overflow)
-    return 'w-64 sm:w-72 lg:w-80 h-56 sm:h-64 lg:h-72 z-10 opacity-75'
+    return 'w-60 sm:w-64 lg:w-72 h-56 sm:h-64 lg:h-72 z-10 opacity-75'
   }
 
   // índice de la izquierda y derecha
@@ -64,7 +64,7 @@ function WorkspaceCards() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
         {/* Carrusel */}
-        <div className="relative py-4">
+        <div className="relative py-4 max-w-7xl mx-auto">
           {/* Flechas */}
           <button
             onClick={prevCard}
@@ -87,7 +87,7 @@ function WorkspaceCards() {
           </button>
 
           {/* Contenedor de cards */}
-          <div className="flex justify-center items-center gap-2 sm:gap-4 lg:gap-6 overflow-hidden">
+          <div className="flex justify-center items-center gap-2 sm:gap-4 lg:gap-6 px-2 sm:px-4 lg:px-8">
                          {/* Izquierda (clickeable) */}
              <div
                onClick={() => setCurrentCard(leftIndex)}
@@ -180,12 +180,17 @@ function WorkspaceCards() {
 
           {/* CTA */}
           <div className="flex justify-center mt-8">
-            <button className="bg-[#fcc803] hover:bg-[#fbbf24] text-black font-black px-8 py-2 rounded-full flex items-center justify-center gap-3 shadow-lg transition-colors">
+            <a 
+              href="https://wa.me/5493543609964?text=Hola!%20Me%20gustaría%20más%20info%20de%20los%20espacios"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-[#fcc803] hover:bg-[#fbbf24] text-black font-black px-8 py-2 rounded-full flex items-center justify-center gap-3 shadow-lg transition-colors"
+            >
               <span className="text-base sm:text-lg font-black">Quiero información</span>
               <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5 fill-current text-black" viewBox="0 0 20 20">
                 <path fillRule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clipRule="evenodd"/>
               </svg>
-            </button>
+            </a>
           </div>
 
          

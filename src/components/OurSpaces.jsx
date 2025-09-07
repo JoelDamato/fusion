@@ -3,7 +3,7 @@ import React from 'react'
 function OurSpaces() {
   return (
     <section id="espacios" className="py-12 sm:py-16 lg:py-20 bg-gray-50">
-        <div className="-ml-4 sm:-ml-4 lg:-ml-6">
+        <div className="-ml-4 sm:-ml-4 lg:-ml-6 mt-3 sm:mt-0">
     <div className="inline-flex items-center bg-[#fcc803] rounded-full px-6 py-2">
       <div className="w-5 h-[2px] bg-black mr-3 ml-5" />
       <span className="font-montserrat  text-black text-sm sm:text-base lg:text-lg font-medium tracking-wider">
@@ -58,12 +58,17 @@ NUESTROS ESPACIOS</span>
         </div>
             {/* Button Container */}
             <div className="flex justify-center mt-8">
-                <button className="bg-[#fcc803] hover:bg-[#fbbf24] text-black font-black px-8 py-1 rounded-full flex items-center justify-center space-x-3 shadow-lg transition-colors">
+                <a 
+                  href="https://wa.me/5493543609964?text=Hola!%20Me%20gustaría%20más%20info%20de%20los%20espacios"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-[#fcc803] hover:bg-[#fbbf24] text-black font-black px-8 py-1 rounded-full flex items-center justify-center space-x-3 shadow-lg transition-colors"
+                >
                   <span className="text-lg font-black">Quiero información</span>
                   <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5 fill-current text-black" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clipRule="evenodd"/>
                   </svg>
-                </button>
+                </a>
               </div>
        
       </div>
