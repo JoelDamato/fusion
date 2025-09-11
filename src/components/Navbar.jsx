@@ -1,13 +1,29 @@
 import React, { useState, useEffect } from 'react'
+import { useNavigate, useLocation } from 'react-router-dom'
 
 function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false)
+  const navigate = useNavigate()
+  const location = useLocation()
 
   useEffect(() => {
     const handleScroll = () => setIsScrolled(window.scrollY > 50)
     window.addEventListener('scroll', handleScroll)
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
+
+  const handleNavClick = (section) => {
+    if (location.pathname === '/reserva') {
+      // Si estamos en la página de reserva, navegar a home con hash
+      navigate(`/#${section}`)
+    } else {
+      // Si estamos en home, hacer scroll a la sección
+      const element = document.getElementById(section)
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' })
+      }
+    }
+  }
 
   return (
     <header
@@ -29,10 +45,10 @@ function Navbar() {
           {/* Desktop: nav + phone juntos */}
           <div className="hidden md:flex items-center space-x-8">
                          <nav className="flex items-center space-x-8">
-               <a href="#inicio" className="text-white text-xl font-black hover:text-yellow-400 transition-colors txt-float-solid-blur">Inicio</a>
-               <a href="#espacios" className="text-white text-xl font-black hover:text-yellow-400 transition-colors txt-float-solid-blur">Nuestros espacios</a>
-               <a href="#contacto" className="text-white text-xl font-black hover:text-yellow-400 transition-colors txt-float-solid-blur">Reserva</a>
-               <a href="#contacto" className="text-white text-xl font-black hover:text-yellow-400 transition-colors txt-float-solid-blur">Contacto</a>
+               <button onClick={() => handleNavClick('inicio')} className="text-white text-xl font-black hover:text-yellow-400 transition-colors txt-float-solid-blur">Inicio</button>
+               <button onClick={() => handleNavClick('espacios')} className="text-white text-xl font-black hover:text-yellow-400 transition-colors txt-float-solid-blur">Nuestros espacios</button>
+               <button onClick={() => navigate('/reserva')} className="text-white text-xl font-black hover:text-yellow-400 transition-colors txt-float-solid-blur">Reserva</button>
+               <button onClick={() => handleNavClick('contacto')} className="text-white text-xl font-black hover:text-yellow-400 transition-colors txt-float-solid-blur">Contacto</button>
              </nav>
 
             {/* Teléfono */}
@@ -69,10 +85,10 @@ function Navbar() {
       {/* Menú móvil desplegable */}
       <div id="mobile-menu" className="md:hidden hidden bg-black/90 backdrop-blur-sm">
         <div className="px-4 py-6 space-y-4">
-          <a href="#inicio" className="block text-white text-lg font-black hover:text-yellow-400 transition-colors py-2">Inicio</a>
-          <a href="#espacios" className="block text-white text-lg font-black hover:text-yellow-400 transition-colors py-2">Nuestros espacios</a>
-          <a href="#contacto" className="block text-white text-lg font-black hover:text-yellow-400 transition-colors py-2">Reserva</a>
-          <a href="#contacto" className="block text-white text-lg font-black hover:text-yellow-400 transition-colors py-2">Contacto</a>
+          <button onClick={() => handleNavClick('inicio')} className="block text-white text-lg font-black hover:text-yellow-400 transition-colors py-2 w-full text-left">Inicio</button>
+          <button onClick={() => handleNavClick('espacios')} className="block text-white text-lg font-black hover:text-yellow-400 transition-colors py-2 w-full text-left">Nuestros espacios</button>
+          <button onClick={() => navigate('/reserva')} className="block text-white text-lg font-black hover:text-yellow-400 transition-colors py-2 w-full text-left">Reserva</button>
+          <button onClick={() => handleNavClick('contacto')} className="block text-white text-lg font-black hover:text-yellow-400 transition-colors py-2 w-full text-left">Contacto</button>
         </div>
       </div>
     </header>

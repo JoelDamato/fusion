@@ -1,6 +1,9 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom'
 
 function Footer() {
+  const navigate = useNavigate()
+
   return (
     <section id="contacto" className="py-12 sm:py-16 lg:py-20 relative">
       {/* Imagen de fondo */}
@@ -33,17 +36,15 @@ function Footer() {
             </svg>
           </a>
           
-          <a 
-            href="https://wa.me/5493543609964?text=Hola!%20Me%20gustaría%20más%20info%20de%20los%20espacios"
-            target="_blank"
-            rel="noopener noreferrer"
+          <button 
+            onClick={() => navigate('/reserva')}
             className="bg-[#fcc803] hover:bg-[#fbbf24] text-black font-black px-8 py-3 sm:py-4 rounded-full flex items-center justify-center space-x-3 shadow-lg transition-colors text-base sm:text-lg"
           >
             <span>RESERVAR</span>
             <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5 fill-current text-black" viewBox="0 0 20 20">
               <path fillRule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clipRule="evenodd"/>
             </svg>
-          </a>
+          </button>
         </div>
       </div>
     </section>

@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Navbar from './components/Navbar'
 import WhyFusionVideo from './components/WhyFusionVideo'
 import WorkspaceCards from './components/WorkspaceCards'
@@ -6,8 +7,9 @@ import OurSpaces from './components/OurSpaces'
 import Memberships from './components/Memberships'
 import Services from './components/Services'
 import Footer from './components/Footer'
+import Reserva from './components/Reserva'
 
-function App() {
+function HomePage() {
   return (
     <div className="min-h-screen bg-white font-monserrat overflow-x-hidden">
       <Navbar />
@@ -63,7 +65,9 @@ function App() {
               <WorkspaceCards />
 
 
-      <OurSpaces />
+      <div id="espacios">
+        <OurSpaces />
+      </div>
 
       <Memberships />
 
@@ -71,6 +75,17 @@ function App() {
 
       <Footer />
     </div>
+  )
+}
+
+function App() {
+  return (
+    <Router>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/reserva" element={<Reserva />} />
+      </Routes>
+    </Router>
   )
 }
 
